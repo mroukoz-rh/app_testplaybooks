@@ -1,3 +1,4 @@
+---
 - name: Check condition and fail if false
   ansible.builtin.fail:
     msg: "The condition was not met, triggering the workflow failure path."
