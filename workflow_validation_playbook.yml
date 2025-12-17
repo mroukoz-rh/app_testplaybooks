@@ -18,7 +18,7 @@
     - name: Trigger Workflow Failure Path
       ansible.builtin.fail:
         msg: "Condition met: The service is {{ required_service_status }}. Failing job to trigger rollback workflow."
-      when: required_service_status == "down" # Change this logic as needed
+      when: content == "ok" # Change this logic as needed
 
     # This task will NEVER run if the 'fail' task above is triggered
     - name: Success Path Task
